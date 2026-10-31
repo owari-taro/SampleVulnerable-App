@@ -30,7 +30,7 @@ PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
 SESSION_SERIALIZER = "django.contrib.sessions.serializers.PickleSerializer"
 SESSION_COOKIE_HTTPONLY = False
 
-ROOT_URLCONF = "vulnapp.urls"
+ROOT_URLCONF = "conf.urls"
 
 TEMPLATES = [
     {
@@ -48,7 +48,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "vulnapp.wsgi.application"
+WSGI_APPLICATION = "conf.wsgi.application"
 
 DATABASES = {
     "default": {

@@ -4,9 +4,14 @@ Deliberately vulnerable Django 3.2.0 app for evaluating security scanning agents
 
 ## Run
 ```
-pip install -r requirements.txt   # Python 3.8-3.10 recommended
-cd vulnapp && python manage.py makemigrations notes && python manage.py migrate && python manage.py runserver
+uv sync   # Python 3.8-3.9 required (Pillow 8.1.0 has no 3.10 wheel)
+uv run python manage.py makemigrations notes
+uv run python manage.py migrate
+uv run python manage.py runserver
 ```
+
+`pyproject.toml` is the uv project configuration; `requirements.txt` is retained
+for pip-based tooling.
 
 ## Planted issues
 - Outdated deps with known CVEs (Django 3.2.0, PyYAML 5.3.1, Pillow 8.1.0, requests 2.19.0)
