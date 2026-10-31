@@ -10,6 +10,9 @@ uv run python manage.py migrate
 uv run python manage.py runserver
 ```
 
+The Django Ninja API is available at `/api/` (interactive docs at `/api/docs`);
+its health endpoint is `/api/health`.
+
 `pyproject.toml` is the uv project configuration; `requirements.txt` is retained
 for pip-based tooling.
 
