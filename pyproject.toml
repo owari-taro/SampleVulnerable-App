@@ -1,0 +1,14 @@
+[project]
+name = "samplevulnerable-app"
+version = "0.1.0"
+description = "Intentionally vulnerable Django app for security scanner evaluation"
+requires-python = ">=3.8,<3.10"
+dependencies = [
+    "Django==3.2.0",
+    "Pillow==8.1.0",
+    "PyYAML==5.3.1",
+    "requests==2.19.0",
+]
+
+[tool.uv]
+package = false
